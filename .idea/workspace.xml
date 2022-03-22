@@ -14,7 +14,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04bb2bda-9a8f-46ed-b14e-8c4c6bdc1f45" name="Default Changelist" comment="" />
+    <list default="true" id="04bb2bda-9a8f-46ed-b14e-8c4c6bdc1f45" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectors.html" beforeDir="false" afterPath="$PROJECT_DIR$/selectors.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +65,7 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -82,6 +85,8 @@
       <workItem from="1647549879987" duration="317000" />
       <workItem from="1647550420576" duration="2796000" />
       <workItem from="1647593564510" duration="248000" />
+      <workItem from="1647599223466" duration="4961000" />
+      <workItem from="1647862932077" duration="9017000" />
     </task>
     <servers />
   </component>
@@ -113,10 +118,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="110" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1647399641595" />
-    <state x="1535" y="47" key="SettingsEditor" timestamp="1647593820587">
+    <state x="1535" y="47" key="SettingsEditor" timestamp="1647599572195">
       <screen x="1366" y="0" width="1440" height="870" />
     </state>
-    <state x="1535" y="47" key="SettingsEditor/0.0.1366.738/1366.0.1440.870@1366.0.1440.870" timestamp="1647593820587" />
+    <state x="1535" y="47" key="SettingsEditor/0.0.1366.738/1366.0.1440.870@1366.0.1440.870" timestamp="1647599572195" />
     <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1647550816384" />
     <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1647396958089">
       <screen x="0" y="0" width="1366" height="738" />

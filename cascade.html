@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cascade</title>
+    <style type="text/css">
+
+        /* position and order of appearance */
+        button {
+            color: red;
+        }
+
+        button {
+            color: blue;
+        }
+        .my-element {
+            background: green;
+            background: purple;
+        }
+        .example {
+            color: red;
+        }
+        h6 {
+            color: purple;
+
+        }
+    </style>
+</head>
+
+<body>
+<h1>Welcome to cascade</h1>
+<div>
+    <div>
+    <button>Hello, i have blue text</button>
+    <div>Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm is split into 4 distinct stages.</div>
+    <h4>Position and order of appearance:</h4>
+    </div>
+
+    <div class="my-element">
+        Hello this is css
+    </div>
+
+    <div class="example" >
+        <h6>My name is html</h6>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>specifity</title>
+    <style type="text/css">
+        button {
+            color: red;
+        }
+        .branding {
+            color: blue;
+        }
+        div#a {background-color: green;}
+        #a {background-color: yellow;}
+        div[id=a] {background-color: blue;}
+
+        .text.text{
+            background-color: sandybrown;
+        }
+        .text{
+           background-color: hotpink;
+        }
+
+        .text.text{
+            background-color: sandybrown;
+        }
+
+        .example{
+            background-color: blue !important;
+        }
+        #example{
+            background-color: hotpink;
+        }
+        .example{
+            background-color: darkred;
+        }
+
+        .inline-style{
+            color: blue;
+        }
+
+        .summery ul li::marker{
+            color: #a75b1b;
+        }
+    </style>
+</head>
+
+<body>
+<button class="branding">Hello, Specificity!</button>
+
+<div>
+    <h1>Scoring each selector type </h1>
+    Each selector type earns points. You add all of these points up to calculate a selector's overall specificity.
+    <div>
+        <h4>Specificity Hierarchy</h4>
+        <ul>
+            <li><b>Inline styles</b> - forexample the h1</li>
+            <li><b>IDs</b> - Example: #navbar</li>
+            <li><b>Class, pseudo-classes, attributes selectors</b> - Example: .test, :hover, [href]</li>
+            <li><b>Elements and pseudo-elements</b> - Example: h1, :before</li>
+        </ul>
+    </div>
+    <div>
+        <div id="a">This is a div</div>
+    </div>
+    <div class="text">
+        Hello Html
+    </div>
+
+    <div>
+        <h4>!important rule</h4>
+        An !important at the end of a CSS value gets a specificity score of 10,000 points. This is the highest
+        specificity that one individual item can get.
+        <em>Example</em>
+        <h1 class="example" id="example">High change my  background</h1>
+    </div>
+    <div>
+        <div class="inline-style" style="color: #b1236a">Inline styling has higher specifity</div>
+    </div>
+
+    <div class="summery">
+        In otherwords:
+        <ul>
+            <li>If the element has inline styling, that automatically1 wins (1,0,0,0 points)</li>
+            <li>For each ID value, apply 0,1,0,0 points</li>
+            <li>For each class value (or pseudo-class or attribute selector), apply 0,0,1,0 points</li>
+            <li>For each element reference, apply 0,0,0,1 point</li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>

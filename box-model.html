@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Learn CSS</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .parent-box{
+            width: 500px;
+            height: 200px;
+            margin: 50px auto;
+            border: 25px solid gray;
+            padding: 25px;
+        }
+
+        .border-box{
+            box-sizing: border-box;
+        }
+
+        .boxes{
+            width: 100vw;
+            height: 100px;
+            background-color: burlywood;
+            justify-content: center;
+
+        }
+        .box-item{
+            color: burlywood;
+            width: 330px;
+            height: 95px;
+            background-color: #283838;
+            display:inline-block;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+<h1>Box model</h1>
+<div>This is a regular box</div>
+<div class="border-box">This box has a box-sizing applied</div>
+<div class="boxes">
+    <div class="box-item">Box one</div>
+    <div class="box-item">Box Two</div>
+    <div class="box-item">Box Three</div>
+    <div class="box-item">Box Four</div>
+
+</div>
+
+
+</body>
+
+</html>

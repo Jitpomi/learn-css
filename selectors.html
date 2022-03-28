@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Learn CSS</title>
+    <style type="text/css">
+        article p:first-of-type {
+            color: gray;
+            background-color: burlywood;
+            font-size: 25pt;
+
+        }
+        article *:first-child {
+            font-weight: bold;
+        }
+        /*selectors*/
+
+        span {
+            background-color: #0066ff;
+            color: white;
+        }
+
+        em {
+            color: rebeccapurple;
+        }
+        *{
+            margin: 1.2rem;
+        }
+        .highlight{
+            background-color: burlywood;
+            color: black;
+        }
+
+        span.highlight{
+            background-color: yellow;
+        }
+
+        .notebox {
+            padding: .5em;
+            border: gray 1px solid;
+        }
+
+        .notebox.warning {
+            background-color: orange;
+            font-weight: bold;
+        }
+
+        .notebox.danger {
+            background-color: red;
+            font-weight: bold;
+        }
+        /*ID selectors*/
+        #one{
+            padding: 1.5em;
+            background-color: cadetblue;
+            color: white;
+        }
+
+        /* type selectors*/
+        h1{
+            color: #72450c;
+        }
+        h4{
+            color: white;
+            padding: 0.3rem;
+            background-color: black;
+            display: table;
+        }
+
+        /* Attribute selector */
+
+        input[type=text] {
+            width: 100px;
+            box-sizing: border-box;
+            transition: width .35s ease-in-out;
+        }
+        input[type=text]:focus{
+            width: 250px;
+            border: 3px solid dodgerblue;
+            outline: none;
+        }
+        [href^='https'] {
+            color: saddlebrown;
+        }
+        [href$='.com']{
+            color: darkslategray;
+        }
+        [href*='www.facebook.com'] {
+            color: red;
+        }
+        /* pseudo elements */
+        .countries li::marker{
+            color: red;
+        }
+        .countries li::selection{
+            color: deeppink;
+            background-color: black;
+        }
+        /* combinators */
+        p strong {
+            color: deeppink;
+        }
+
+        li:first-of-type + li {
+            color: red;
+        }
+
+        .lorem em {
+            color: orangered;
+        }
+        /* childselector */
+        .childselector>p{
+            color: blue;
+        }
+
+        /* Adjacent Sibling Selector (+)*/
+        .adjacent div+p{
+            background-color: hotpink;
+            color: black;
+            padding: 1.3rem;
+        }
+
+        /* General sibling selectors */
+        .general div ~ p{
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+
+<body>
+<h1>Selectors</h1>
+<article>
+
+    <p>Hello, i want to be different from other text</p>
+    <p>I want to be normal sized and the default color.</p>
+</article>
+<div class="selectors">
+    <h1>Types of selectors</h1>
+    <h3>Type selectors</h3>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis <span>kohlrabi welsh onion</span> daikon amaranth tatsoi tomatillo
+        melon azuki bean garlic.</p>
+
+    <p>Gumbo beet greens corn soko <strong>endive</strong> gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+        greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+
+    <p>Turnip greens yarrow ricebean rutabaga <em>endive cauliflower</em> sea lettuce kohlrabi amaranth water spinach avocado
+        daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach
+    </p>
+<!--Target an element if it has more than one class applied -->
+    <h1>The universal selector *</h1>
+    <h1>Class selectors</h1>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        <span class="highlight">Vestibulumtortor quam,</span>
+        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+        Mauris placerat eleifend leo.</p>
+    <p class="highlight">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+        Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
+    </p>
+
+    <!--Target an element if it has more than one class applied -->
+    <h4>Target an element if it has more than one class applied</h4>
+    <div class="notebox">
+        This is an informational note.
+    </div>
+
+    <div class="notebox warning">
+        This note shows a warning.
+    </div>
+
+    <div class="notebox danger">
+        This note shows danger!
+    </div>
+
+    <div class="danger">
+        This won't get styled — it also needs to have the notebox class
+    </div>
+
+    <!-- ID selectors -->
+    <div>
+        <h1>ID selectors</h1>
+        <div id="one">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+        </div>
+    </div>
+    <div>
+        <!-- Tyoe selector -->
+        <h1>Type selectors</h1>
+        <h4>Learn css</h4>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+        or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+        you need to be sure there isn't anything embarrassing hidden in the middle of text.
+
+    </div>
+    <div>
+        <h1>Attribute selectors</h1>
+        Search: <input type="text" name="search">
+
+        <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry <a href="www.facebook.com">link
+        </a> . Lorem  Ipsum has been the  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley <a href="https://code.org">codezone</a> of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like <a href="website.com">website</a> Aldus
+            PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div class="countries">
+            <!-- markers-->
+            <h1>Pseudo elements</h1>
+            <ul>
+                <li>Uganda</li>
+                <li>Kenya</li>
+                <li>Tanzania</li>
+                <li>Rwanda</li>
+                <li>Burundi</li>
+            </ul>
+        </div>
+        <div>
+            <h1>
+                Complex selectors
+            </h1>
+            <h4>Combinators</h4>
+            <p>A paragraph of text with some <strong>bold text for emphasis</strong>.</p>
+        </div>
+        <ul>
+            <li>One</li>
+            <li>Two!</li>
+            <li>Three</li>
+        </ul>
+    </div>
+    <div class="lorem">
+        <h4>Descendant Selector</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius optio <em>vitae nostrum v</em> oluptatum dignissimos sapiente dicta atque laudantium ipsam, doloribus at maxime deleniti et illum sit quidem dolor inventore voluptatibus exercitationem
+            placeat recusandae dolorem! Repellat ad unde quo <strong>corrupti quasi velit</strong> . Ullam soluta beatae esse eaque perspiciatis id sequi totam.</p>
+
+    </div>
+
+    <div class="childselector">
+        <h4>Child Selector (>)</h4>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, expedita fugit perspiciatis et maxime quia nobis molestias ea aut quidem obcaecati quod sequi ullam velit? Adipisci officiis culpa mollitia excepturi modi hic voluptatum ut officia, voluptatem
+            accusantium architecto sint repellat quis quae, illum, accusamus veritatis impedit quam eaque? Nam non ea dicta accusantium aspernatur? Libero, numquam!
+        </p>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, expedita fugit perspiciatis et
+            maxime quia nobis molestias ea aut quidem obcaecati quod sequi ullam velit? Adipisci officiis culpa
+                mollitia excepturi modi hic voluptatum ut officia, voluptatem</p>
+
+        </div>
+    </div>
+
+    <div class="adjacent">
+        <h4>Adjacent Sibling Selector (+)</h4>
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+        </div>
+        <p>Paragraph 3. After a div.</p>
+        <p>Paragraph 4. After a div.</p>
+    </div>
+    <div class="general">
+        <h4>General Sibling Selector (~)</h4>
+        <p>Paragraph 1.</p>
+
+        <div>
+            <p>Paragraph 2.</p>
+        </div>
+
+        <p>Paragraph 3.</p>
+        <code>Some code.</code>
+        <p>Paragraph 4.</p>
+    </div>
+
+</div>
+</body>
+
+</html>
